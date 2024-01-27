@@ -9,7 +9,7 @@ const albumReducer = (state = initialState, action) => {
     case DEEZER_SET_ALBUM:
       return {
         ...state,
-        results: action.payload,
+        results: [...state.results, ...action.payload],
       };
     default:
       return state;
